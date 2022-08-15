@@ -20,6 +20,7 @@ class Venue(db.Model):
     state               = db.Column(db.String(130))
     address             = db.Column(db.String(130))
     phone               = db.Column(db.String(130))
+    genres              = db.Column(db.String(130)) 
     image_link          = db.Column(db.String(500))
     facebook_link       = db.Column(db.String(130))
     website_link        = db.Column(db.String(130))
