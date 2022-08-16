@@ -577,10 +577,9 @@ def create_shows():
 def create_show_submission():
   # called to create new shows in the db, upon submitting new show listing form
   # TODO: insert form data as a new Show record in the db, instead
-  form = ShowForm()
-  artist_id = request.form['artist_id']
-  venue_id = request.form['venue_id']
-  start_time = request.form['start_time']
+  artist_id   = request.form['artist_id']
+  venue_id    = request.form['venue_id']
+  start_time  = request.form['start_time']
   show = Show(
     artist_id=artist_id,
     venue_id=venue_id,
@@ -593,7 +592,8 @@ def create_show_submission():
     flash('Show was successfully listed!')
   except:
     db.session.rollback()
-    flash('An error occurred. Show could not be listed.')
+    flash('An error occurred. Show  could not be listed.')
+
   
   # TODO: on unsuccessful db insert, flash an error instead.
   # e.g., flash('An error occurred. Show could not be listed.')
@@ -608,6 +608,9 @@ def not_found_error(error):
 def server_error(error):
     return render_template('errors/500.html'), 500
 
+@app.route('/shows/searche/')
+def show():
+  return render_template('pages/show.html')
 
 if not app.debug:
     file_handler = FileHandler('error.log')

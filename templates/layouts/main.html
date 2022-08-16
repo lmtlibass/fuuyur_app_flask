@@ -75,6 +75,15 @@
                   aria-label="Search">
               </form>
               {% endif %}
+              {% if (request.endpoint == 'shows') %}
+                  <a href="/shows/searche/" style="padding: 8px; 
+                                              background-color : orange;
+                                              border-radius: 5px;
+                                              margin-top: 10px;
+                                              color: white;
+                                              font-weight: bolder;
+                                              ">searche Show</a> 
+              {% endif %}
             </li>
           </ul>
           <ul class="nav navbar-nav">

@@ -6,12 +6,19 @@
         <h1>Fyyur Search!</h1>
     </div>
     <p class="lead"> Show Search </p>
-
-    
+    <div class="row p-5">
+        <form class="search" method="post" action="/shows/search">
+            <input class="form-control"
+              type="search"
+              name="search_term"
+              placeholder="Find an artist"
+              aria-label="Search">
+        </form>
+    </div>
     <ul class="nav nav-pills">
         <li class="active"><a>Shows</a></li>
     </ul>
 
-    <h1>libs</h1>
+{#    Todo implement show search frontend #}
 
 {% endblock %}
